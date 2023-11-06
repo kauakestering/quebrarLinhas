@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quebrar Linhas por Vírgulas</title>
+</head>
+<body>
+  <h1>Quebrar Linhas por Vírgulas</h1>
+  <p>Insira uma string com vírgulas e clique no botão para quebrar as linhas:</p>
+  <textarea id="inputText" rows="4" cols="50"></textarea>
+  <br>
+  <button onclick="quebrarLinhasPorVirgula()">Quebrar Linhas</button>
+  <h2>Resultado:</h2>
+  <pre id="resultado"></pre>
+
+  <script>
+    function quebrarLinhasPorVirgula() {
+      const inputText = document.getElementById('inputText').value;
+      const stringsQuebradas = inputText.split(',');
+      const resultado = stringsQuebradas.join('\n');
+      document.getElementById('resultado').textContent = resultado;
+    }
+  </script>
+</body>
+</html>
